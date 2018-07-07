@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */; };
+		0D5136F420F143F90096FFE2 /* libsnowboy-detect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5136ED20F143F90096FFE2 /* libsnowboy-detect.a */; };
+		0D5136F520F143F90096FFE2 /* SnowboyWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D5136EE20F143F90096FFE2 /* SnowboyWrapper.mm */; };
+		0D5136F620F143F90096FFE2 /* common.res in Resources */ = {isa = PBXBuildFile; fileRef = 0D5136EF20F143F90096FFE2 /* common.res */; };
+		0D5136F720F143F90096FFE2 /* kingyo.pmdl in Resources */ = {isa = PBXBuildFile; fileRef = 0D5136F020F143F90096FFE2 /* kingyo.pmdl */; };
 		304C92FD052FABFA9B876389 /* Pods_S5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */; };
 		8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC892F120F0E3940062E74B /* AppDelegate.swift */; };
 		8FC892F420F0E3940062E74B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC892F320F0E3940062E74B /* ViewController.swift */; };
@@ -42,6 +46,13 @@
 
 /* Begin PBXFileReference section */
 		0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AITalkWebAPI.swift; sourceTree = "<group>"; };
+		0D5136EC20F143F70096FFE2 /* S5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "S5-Bridging-Header.h"; sourceTree = "<group>"; };
+		0D5136ED20F143F90096FFE2 /* libsnowboy-detect.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libsnowboy-detect.a"; sourceTree = "<group>"; };
+		0D5136EE20F143F90096FFE2 /* SnowboyWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SnowboyWrapper.mm; sourceTree = "<group>"; };
+		0D5136EF20F143F90096FFE2 /* common.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = common.res; sourceTree = "<group>"; };
+		0D5136F020F143F90096FFE2 /* kingyo.pmdl */ = {isa = PBXFileReference; lastKnownFileType = file; path = kingyo.pmdl; sourceTree = "<group>"; };
+		0D5136F120F143F90096FFE2 /* SnowboyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowboyWrapper.h; sourceTree = "<group>"; };
+		0D5136F220F143F90096FFE2 /* snowboy-detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "snowboy-detect.h"; sourceTree = "<group>"; };
 		1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7FB87C564A52022E97CD74 /* Pods-S5UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5UITests/Pods-S5UITests.release.xcconfig"; sourceTree = "<group>"; };
 		40A04C6AFA39E6251094BACB /* Pods_S5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5136F420F143F90096FFE2 /* libsnowboy-detect.a in Frameworks */,
 				C14D6BF6DE21297359595731 /* Pods_S5.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +122,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		0D5136EB20F143DF0096FFE2 /* Snowboy Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D5136EF20F143F90096FFE2 /* common.res */,
+				0D5136F020F143F90096FFE2 /* kingyo.pmdl */,
+				0D5136ED20F143F90096FFE2 /* libsnowboy-detect.a */,
+				0D5136F220F143F90096FFE2 /* snowboy-detect.h */,
+				0D5136F120F143F90096FFE2 /* SnowboyWrapper.h */,
+				0D5136EE20F143F90096FFE2 /* SnowboyWrapper.mm */,
+				0D5136EC20F143F70096FFE2 /* S5-Bridging-Header.h */,
+			);
+			path = "Snowboy Files";
+			sourceTree = "<group>";
+		};
 		8FC892E520F0E3940062E74B = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +161,7 @@
 		8FC892F020F0E3940062E74B /* S5 */ = {
 			isa = PBXGroup;
 			children = (
+				0D5136EB20F143DF0096FFE2 /* Snowboy Files */,
 				8FC8932520F0FFC80062E74B /* souce */,
 				8FC892F120F0E3940062E74B /* AppDelegate.swift */,
 				8FC892F320F0E3940062E74B /* ViewController.swift */,
@@ -249,6 +276,7 @@
 				TargetAttributes = {
 					8FC892ED20F0E3940062E74B = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0940;
 					};
 					8FC8930120F0E3950062E74B = {
 						CreatedOnToolsVersion = 9.3;
@@ -289,6 +317,8 @@
 				8FC892FC20F0E3950062E74B /* LaunchScreen.storyboard in Resources */,
 				8FC892F920F0E3950062E74B /* Assets.xcassets in Resources */,
 				8FC892F720F0E3940062E74B /* Main.storyboard in Resources */,
+				0D5136F620F143F90096FFE2 /* common.res in Resources */,
+				0D5136F720F143F90096FFE2 /* kingyo.pmdl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +423,7 @@
 				8FC892F420F0E3940062E74B /* ViewController.swift in Sources */,
 				8FC8932220F0ED460062E74B /* SelectBasicViewController.swift in Sources */,
 				8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */,
+				0D5136F520F143F90096FFE2 /* SnowboyWrapper.mm in Sources */,
 				8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */,
 				0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */,
 			);
@@ -568,14 +599,21 @@
 			baseConfigurationReference = C5380F5B1EA42554121B6485 /* Pods-S5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = S5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/S5/Snowboy\\ Files",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = manjii.com.S5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "S5/Snowboy Files/S5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -586,14 +624,20 @@
 			baseConfigurationReference = 7F90FAD83E5753809B55118A /* Pods-S5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = S5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/S5/Snowboy\\ Files",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = manjii.com.S5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "S5/Snowboy Files/S5-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
