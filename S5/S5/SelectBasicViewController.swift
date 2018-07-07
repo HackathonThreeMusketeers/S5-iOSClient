@@ -43,6 +43,17 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
+    @IBAction func myButton(_ sender: Any) {
+        let title = "アラートテスト"
+        let message = "タップしてくれてサンクス."
+        let okText = "ok"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let okayButton = UIAlertAction(title: okText, style: UIAlertActionStyle.cancel, handler: nil)
+        alert.addAction(okayButton)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
 
     /*

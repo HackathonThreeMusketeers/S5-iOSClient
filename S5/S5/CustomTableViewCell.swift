@@ -28,5 +28,5 @@ class CustomTableViewCell: UITableViewCell {
         myImageView.image = UIImage(named: imageName)
         myTitleLabel.text = titleText
     }
-
+    
 }
