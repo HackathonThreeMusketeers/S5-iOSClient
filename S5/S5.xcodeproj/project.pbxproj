@@ -12,6 +12,7 @@
 		0D5136F520F143F90096FFE2 /* SnowboyWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D5136EE20F143F90096FFE2 /* SnowboyWrapper.mm */; };
 		0D5136F620F143F90096FFE2 /* common.res in Resources */ = {isa = PBXBuildFile; fileRef = 0D5136EF20F143F90096FFE2 /* common.res */; };
 		0D5136F720F143F90096FFE2 /* kingyo.pmdl in Resources */ = {isa = PBXBuildFile; fileRef = 0D5136F020F143F90096FFE2 /* kingyo.pmdl */; };
+		0D5136FB20F145D30096FFE2 /* SelectBasicViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5136FA20F145D30096FFE2 /* SelectBasicViewController+Extension.swift */; };
 		304C92FD052FABFA9B876389 /* Pods_S5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */; };
 		8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC892F120F0E3940062E74B /* AppDelegate.swift */; };
 		8FC892F420F0E3940062E74B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC892F320F0E3940062E74B /* ViewController.swift */; };
@@ -53,6 +54,7 @@
 		0D5136F020F143F90096FFE2 /* kingyo.pmdl */ = {isa = PBXFileReference; lastKnownFileType = file; path = kingyo.pmdl; sourceTree = "<group>"; };
 		0D5136F120F143F90096FFE2 /* SnowboyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowboyWrapper.h; sourceTree = "<group>"; };
 		0D5136F220F143F90096FFE2 /* snowboy-detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "snowboy-detect.h"; sourceTree = "<group>"; };
+		0D5136FA20F145D30096FFE2 /* SelectBasicViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectBasicViewController+Extension.swift"; sourceTree = "<group>"; };
 		1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7FB87C564A52022E97CD74 /* Pods-S5UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5UITests/Pods-S5UITests.release.xcconfig"; sourceTree = "<group>"; };
 		40A04C6AFA39E6251094BACB /* Pods_S5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 				8FC892F820F0E3950062E74B /* Assets.xcassets */,
 				8FC892FA20F0E3950062E74B /* LaunchScreen.storyboard */,
 				8FC892FD20F0E3950062E74B /* Info.plist */,
+				0D5136FA20F145D30096FFE2 /* SelectBasicViewController+Extension.swift */,
 			);
 			path = S5;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */,
 				0D5136F520F143F90096FFE2 /* SnowboyWrapper.mm in Sources */,
 				8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */,
+				0D5136FB20F145D30096FFE2 /* SelectBasicViewController+Extension.swift in Sources */,
 				0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
