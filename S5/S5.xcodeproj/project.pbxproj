@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */; };
 		304C92FD052FABFA9B876389 /* Pods_S5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */; };
 		8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC892F120F0E3940062E74B /* AppDelegate.swift */; };
 		8FC892F420F0E3940062E74B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC892F320F0E3940062E74B /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AITalkWebAPI.swift; sourceTree = "<group>"; };
 		1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S5Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7FB87C564A52022E97CD74 /* Pods-S5UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5UITests/Pods-S5UITests.release.xcconfig"; sourceTree = "<group>"; };
 		40A04C6AFA39E6251094BACB /* Pods_S5.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_S5.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				8FC892F120F0E3940062E74B /* AppDelegate.swift */,
 				8FC892F320F0E3940062E74B /* ViewController.swift */,
 				8FC8932120F0ED460062E74B /* SelectBasicViewController.swift */,
+				0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */,
 				8FC8932720F104840062E74B /* CustomTableViewCell.swift */,
 				8FC892F520F0E3940062E74B /* Main.storyboard */,
 				8FC892F820F0E3950062E74B /* Assets.xcassets */,
@@ -391,6 +394,7 @@
 				8FC8932220F0ED460062E74B /* SelectBasicViewController.swift in Sources */,
 				8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */,
 				8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */,
+				0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
