@@ -12,6 +12,7 @@ class CustomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myTitleLabel: UILabel!
+    var indexPath = IndexPath()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +28,10 @@ class CustomTableViewCell: UITableViewCell {
     func setCell(imageName: String, titleText: String, descriptionText: String) {
         myImageView.image = UIImage(named: imageName)
         myTitleLabel.text = titleText
+    }
+    
+    @IBAction func pushCellButton(_ sender: Any) {
+        print(indexPath.row)
     }
     
 }

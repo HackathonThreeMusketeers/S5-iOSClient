@@ -15,6 +15,9 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     
     /// 画像のタイトル
     let imageTitles = ["ソース1", "ソース2", "ソース3", "ソース4"]
+    
+    @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +43,11 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         // セルに値を設定
         cell.myImageView.image = UIImage(named: imageNames[indexPath.row])
         cell.myTitleLabel.text = imageTitles[indexPath.row]
+        cell.indexPath = indexPath
         
         return cell
     }
-    @IBAction func myButton(_ sender: Any) {
+    @IBAction func myButton(_ sender: UIButton) {
         let title = "アラートテスト"
         let message = "タップしてくれてサンクス."
         let okText = "ok"

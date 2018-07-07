@@ -91,6 +91,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <connections>
                                                         <action selector="myButton:" destination="DnP-Iq-cdJ" eventType="touchUpInside" id="lIv-I9-bn3"/>
+                                                        <action selector="pushCellButton:" destination="DWP-Ra-rPq" eventType="touchUpInside" id="fj2-Bn-RZR"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -110,6 +111,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gIc-DN-ez1"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6fu-zi-Va9" id="x8V-zz-gfr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmu-uw-xiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
