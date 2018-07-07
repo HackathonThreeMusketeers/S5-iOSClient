@@ -86,7 +86,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="yqe-zM-gmM">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="tIX-1B-Nyf"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="tIX-1B-Nyf">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="azy-jY-6m3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="音声" id="6T8-f5-f8e"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -119,7 +124,12 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="TAl-Yj-mCS">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="6az-4K-Y45"/>
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="6az-4K-Y45">
+                                            <connections>
+                                                <segue destination="DnP-Iq-cdJ" kind="show" id="AX2-AA-LF6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="音声" id="26z-tq-2iL"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -130,7 +140,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2J7-Kb-QaA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931" y="916"/>
+            <point key="canvasLocation" x="957" y="1006"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9cu-VJ-YDu"/>
+        <segue reference="AX2-AA-LF6"/>
+    </inferredMetricsTieBreakers>
 </document>
