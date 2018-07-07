@@ -16,6 +16,8 @@
 		8FC8930720F0E3950062E74B /* S5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8930620F0E3950062E74B /* S5Tests.swift */; };
 		8FC8931220F0E3960062E74B /* S5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8931120F0E3960062E74B /* S5UITests.swift */; };
 		8FC8932220F0ED460062E74B /* SelectBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8932120F0ED460062E74B /* SelectBasicViewController.swift */; };
+		8FC8932620F0FFC80062E74B /* souce in Resources */ = {isa = PBXBuildFile; fileRef = 8FC8932520F0FFC80062E74B /* souce */; };
+		8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC8932720F104840062E74B /* CustomTableViewCell.swift */; };
 		B5591135EA30FCC9E753D1AF /* Pods_S5UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479A57F95B6762D31E1EF8B6 /* Pods_S5UITests.framework */; };
 		C14D6BF6DE21297359595731 /* Pods_S5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A04C6AFA39E6251094BACB /* Pods_S5.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		8FC8931120F0E3960062E74B /* S5UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S5UITests.swift; sourceTree = "<group>"; };
 		8FC8931320F0E3960062E74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC8932120F0ED460062E74B /* SelectBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBasicViewController.swift; sourceTree = "<group>"; };
+		8FC8932520F0FFC80062E74B /* souce */ = {isa = PBXFileReference; lastKnownFileType = folder; path = souce; sourceTree = "<group>"; };
+		8FC8932720F104840062E74B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		94448FB42B586215D8348756 /* Pods-S5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5Tests/Pods-S5Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C5380F5B1EA42554121B6485 /* Pods-S5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S5/Pods-S5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,9 +133,11 @@
 		8FC892F020F0E3940062E74B /* S5 */ = {
 			isa = PBXGroup;
 			children = (
+				8FC8932520F0FFC80062E74B /* souce */,
 				8FC892F120F0E3940062E74B /* AppDelegate.swift */,
 				8FC892F320F0E3940062E74B /* ViewController.swift */,
 				8FC8932120F0ED460062E74B /* SelectBasicViewController.swift */,
+				8FC8932720F104840062E74B /* CustomTableViewCell.swift */,
 				8FC892F520F0E3940062E74B /* Main.storyboard */,
 				8FC892F820F0E3950062E74B /* Assets.xcassets */,
 				8FC892FA20F0E3950062E74B /* LaunchScreen.storyboard */,
@@ -276,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC8932620F0FFC80062E74B /* souce in Resources */,
 				8FC892FC20F0E3950062E74B /* LaunchScreen.storyboard in Resources */,
 				8FC892F920F0E3950062E74B /* Assets.xcassets in Resources */,
 				8FC892F720F0E3940062E74B /* Main.storyboard in Resources */,
@@ -382,6 +389,7 @@
 			files = (
 				8FC892F420F0E3940062E74B /* ViewController.swift in Sources */,
 				8FC8932220F0ED460062E74B /* SelectBasicViewController.swift in Sources */,
+				8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */,
 				8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
