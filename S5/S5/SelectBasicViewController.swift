@@ -14,10 +14,10 @@ import AVFoundation
 class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     /// 画像のファイル名
-    let imageNames = ["souce/souce1.png", "souce/souce2.png", "souce/souce3.png", "souce/souce4.png"]
+    let imageNames = ["souce/souce1.png", "souce/souce2.png", "souce/souce3.png", "souce/souce4.png", "souce/souce4.png"]
     
     /// 画像のタイトル
-    let imageTitles = ["ソース1", "ソース2", "ソース3", "ソース4"]
+    let imageTitles = ["砂糖", "ソース2", "ソース3", "ソース4", "ソース5"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -51,7 +51,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         speechRecognizer.delegate = self
         
         //Todo 音声ボタンを押したらstartHotwordDetect()を実行？？　
-        startHotwordDetect()
+        //startHotwordDetect()
         // Do any additional setup after loading the view.
     }
 
