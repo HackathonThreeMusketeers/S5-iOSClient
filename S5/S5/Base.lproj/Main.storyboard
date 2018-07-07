@@ -52,13 +52,30 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="yqe-zM-gmM">
-                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="tIX-1B-Nyf">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="azy-jY-6m3"/>
-                                            </connections>
+                                    <navigationItem id="yqe-zM-gmM">
+                                        <nil key="title"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="QId-JS-KIA">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SLG-bl-9T6">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="aE6-dD-4yB"/>
+                                                </connections>
+                                            </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="音声" id="6T8-f5-f8e"/>
+                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t8n-cn-T4M">
+                                            <rect key="frame" x="164.5" y="7" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ZnI-Fl-ycA">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5va-m8-SD0">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
