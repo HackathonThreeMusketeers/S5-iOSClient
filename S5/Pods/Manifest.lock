@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (4.7.2)
+  - AudioKit (4.2.4):
+    - AudioKit/UI (= 4.2.4)
+  - AudioKit/UI (4.2.4)
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
+  - AudioKit
   - SwiftyJSON (>= 2.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AudioKit
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AudioKit: 90ed0de2bc50ab68306f4b424ae1622fc9149b8e
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: da813c913a4db227eb10399baac82a92c6aff97c
+PODFILE CHECKSUM: cb19f1e2de8d6ab8ef321d4f5ac175eb0b78da8d
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3
