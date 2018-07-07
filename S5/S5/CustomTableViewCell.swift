@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class CustomTableViewCell: UITableViewCell {
 
@@ -31,7 +33,19 @@ class CustomTableViewCell: UITableViewCell {
     }
     
     @IBAction func pushCellButton(_ sender: Any) {
-        print(indexPath.row)
+        //print(indexPath.row)
+        let id = indexPath.row+1
+        var url:String = "http://ec2-18-222-171-227.us-east-2.compute.amazonaws.com:3000/vibration?="
+        url = url + id.description
+        print(url)
+        Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
+            switch response.result {
+            case .success:
+                let json:JSON = JSON(response.result.value ?? kill)
+                print(json["title"])
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-    
 }
