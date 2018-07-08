@@ -226,7 +226,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
             }
             if(id != 0){
                 print(id)
-                var url:String = "http://ec2-18-222-171-227.us-east-2.compute.amazonaws.com:3000/vibration?="
+                var url:String = "http://ec2-18-222-171-227.us-east-2.compute.amazonaws.com:3000/vibration?id="
                 url = url + id.description
                 print(url)
                 Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
