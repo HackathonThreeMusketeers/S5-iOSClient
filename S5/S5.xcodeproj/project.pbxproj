@@ -19,6 +19,7 @@
 		0D85D91A20F1C2E700FD2134 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91920F1C2E700FD2134 /* Accelerate.framework */; };
 		0D85D92020F1C84500FD2134 /* SwiftGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91F20F1C84500FD2134 /* SwiftGif.framework */; };
 		0D85D92220F1CA3800FD2134 /* SwiftyGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */; };
+		0D85D92420F1CBDC00FD2134 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85D92320F1CBDC00FD2134 /* Credentials.swift */; };
 		8F3EB26D20F1BAE300F65799 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26C20F1BAE300F65799 /* logo.png */; };
 		8F3EB26F20F1BB6E00F65799 /* sagasu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26E20F1BB6E00F65799 /* sagasu.png */; };
 		8F3EB27120F1BCE400F65799 /* touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB27020F1BCE400F65799 /* touroku.png */; };
@@ -73,6 +74,7 @@
 		0D85D91920F1C2E700FD2134 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		0D85D91F20F1C84500FD2134 /* SwiftGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGif.framework; path = Carthage/Build/iOS/SwiftGif.framework; sourceTree = "<group>"; };
 		0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyGif.framework; path = Carthage/Build/iOS/SwiftyGif.framework; sourceTree = "<group>"; };
+		0D85D92320F1CBDC00FD2134 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = "../../../swift/speech-to-text-swift/Speech to Text/Credentials.swift"; sourceTree = "<group>"; };
 		8F3EB26C20F1BAE300F65799 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8F3EB26E20F1BB6E00F65799 /* sagasu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagasu.png; sourceTree = "<group>"; };
 		8F3EB27020F1BCE400F65799 /* touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touroku.png; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				8FC892F320F0E3940062E74B /* ViewController.swift */,
 				8FC8932120F0ED460062E74B /* SelectBasicViewController.swift */,
 				0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */,
+				0D85D92320F1CBDC00FD2134 /* Credentials.swift */,
 				8FC8932720F104840062E74B /* CustomTableViewCell.swift */,
 				8FC892F520F0E3940062E74B /* Main.storyboard */,
 				8F3EB27220F1C00C00F65799 /* sasisuseso.gif */,
@@ -435,6 +438,7 @@
 				8FC892F420F0E3940062E74B /* ViewController.swift in Sources */,
 				8FC8932220F0ED460062E74B /* SelectBasicViewController.swift in Sources */,
 				8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */,
+				0D85D92420F1CBDC00FD2134 /* Credentials.swift in Sources */,
 				0D5136F520F143F90096FFE2 /* SnowboyWrapper.mm in Sources */,
 				8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */,
 				0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */,

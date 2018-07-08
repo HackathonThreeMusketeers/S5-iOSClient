@@ -11,6 +11,7 @@ import Speech
 import AVFoundation
 import Alamofire
 import SwiftyJSON
+import SpeechToTextV1
 
 class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
@@ -32,25 +33,24 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     
     var soundFileURL: URL!
     var audioRecorder: AVAudioRecorder!
-    
-    private var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
-    private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
-    private var recognitionTask: SFSpeechRecognitionTask?
-    private var audioEngine = AVAudioEngine()
-    
+
     var m_player: AVAudioPlayer!
     private static let OUTPUT_FILENAME = "sample.mp3"
     
     var state = State.hotword
     var speechText = ""
+    var speechToText: SpeechToText!
+    var accumulator = SpeechRecognitionResultsAccumulator()
     
     let commands: [Command] = [.shoyu, .salt, .suger]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initSnowboy()
-        speechRecognizer.delegate = self
-        
+        speechToText = SpeechToText(
+            username: Credentials.SpeechToTextUsername,
+            password: Credentials.SpeechToTextPassword
+        )
         //Todo 音声ボタンを押したらstartHotwordDetect()を実行？？　
         startHotwordDetect()
         // Do any additional setup after loading the view.
@@ -172,45 +172,18 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func startSpeechRecognizer(){
-        try! startSpeechRecognizerRecording()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
-            self.stopSpeechRecognizer()
-            let result = self.getResponseText(text: self.speechText)
-            print(result)
-            self.speech(text: result + "Ready")
-        })
-    }
-    
-    func stopSpeechRecognizer(){
-        self.recognitionTask?.cancel()
-        self.recognitionTask?.finish()
-        self.audioEngine.stop()
-    }
-    
-    
-    private func startSpeechRecognizerRecording() throws {
-        
-        // Cancel the previous task if it's running.
-        if let recognitionTask = recognitionTask {
-            recognitionTask.cancel()
-            self.recognitionTask = nil
-        }
-        
-        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ja-JP"))!
-        audioEngine = AVAudioEngine()
-        
-        configureAudioSession()
-        
-        let recordingFormat = audioEngine.inputNode.outputFormat(forBus: 0)
-        audioEngine.inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
-            self.recognitionRequest?.append(buffer)
-        }
-        try! audioEngine.start()
-        
-        recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest!) { result, error in
-            self.speechText = (result?.bestTranscription.formattedString ?? "")
-            print(self.speechText)
+
+        let failure = { (error: Error) in print(error) }
+        var settings = RecognitionSettings(contentType: "audio/ogg;codecs=opus")
+        settings.interimResults = false
+        speechToText.recognizeMicrophone(settings: settings, model: "ja-JP_BroadbandModel",failure: failure) {
+            
+            results in
+            self.accumulator.add(results: results)
+            print(self.accumulator.bestTranscript)
+            self.speechText = self.accumulator.bestTranscript
+            self.speech(text: self.speechText + "Ready")
+            
             //ここにhttp書く
             var id = 0
             if(self.speechText=="佐藤"){
@@ -225,25 +198,24 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
                 id = 5
             }
             if(id != 0){
-                print(id)
                 var url:String = "http://ec2-18-222-171-227.us-east-2.compute.amazonaws.com:3000/vibration?id="
                 url = url + id.description
                 print(url)
                 Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
                     switch response.result {
                     case .success:
-                        let json:JSON = JSON(response.result.value ?? kill)
-                        print(json["title"])
+                        let json = JSON(response.result.value ?? kill)
                     case .failure(let error):
                         print(error)
                     }
                 }
             }
-            if let error = error {
-                print("ERROR!")
-                print(error.localizedDescription)
-            }
+            
         }
+    }
+    
+    func stopSpeechRecognizer(){
+        speechToText.stopRecognizeMicrophone()
     }
     
     private func configureAudioSession() {

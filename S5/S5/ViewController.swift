@@ -16,7 +16,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let image = UIImage(gifName: "sasisuseso")
-        imageView.image = image
+        imageView.setGifImage(image)
+        imageView.startAnimatingGif()
+
         
     }
 
