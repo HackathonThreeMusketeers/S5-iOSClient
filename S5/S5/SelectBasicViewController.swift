@@ -10,6 +10,8 @@ import UIKit
 import AudioKit
 import Speech
 import AVFoundation
+import Alamofire
+import SwiftyJSON
 
 class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
@@ -51,7 +53,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         speechRecognizer.delegate = self
         
         //Todo 音声ボタンを押したらstartHotwordDetect()を実行？？　
-        //startHotwordDetect()
+        startHotwordDetect()
         // Do any additional setup after loading the view.
     }
 
@@ -210,6 +212,34 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest!) { result, error in
             self.speechText = (result?.bestTranscription.formattedString ?? "")
             print(self.speechText)
+            //ここにhttp書く
+            var id = 0
+            if(self.speechText=="佐藤"){
+                id = 1
+            }else if(self.speechText=="塩"){
+                id = 2
+            }else if(self.speechText=="酢"){
+                id = 3
+            }else if(self.speechText=="醤油"){
+                id = 4
+            }else if(self.speechText=="みそ"){
+                id = 5
+            }
+            if(id != 0){
+                print(id)
+                var url:String = "http://ec2-18-222-171-227.us-east-2.compute.amazonaws.com:3000/vibration?="
+                url = url + id.description
+                print(url)
+                Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
+                    switch response.result {
+                    case .success:
+                        let json:JSON = JSON(response.result.value ?? kill)
+                        print(json["title"])
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+            }
             if let error = error {
                 print("ERROR!")
                 print(error.localizedDescription)
