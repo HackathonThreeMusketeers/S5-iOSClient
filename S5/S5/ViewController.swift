@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+import SwiftGifOrigin
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let image = UIImage.gif(name: "sasisuseso")
+        imageView.image = image
+        
     }
 
     override func didReceiveMemoryWarning() {
