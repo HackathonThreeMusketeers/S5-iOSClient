@@ -42,6 +42,8 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     
     var state = State.hotword
     var speechText = ""
+    
+    let commands: [Command] = [.shoyu, .salt, .suger]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -159,7 +161,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func startHotwordDetect(){
-        hotwordTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(startRecording), userInfo: nil, repeats: true)
+        hotwordTimer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(startRecording), userInfo: nil, repeats: true)
         hotwordTimer.fire()
     }
     
@@ -172,7 +174,9 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         try! startSpeechRecognizerRecording()
         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
             self.stopSpeechRecognizer()
-            self.speech(text: "醤油Ready")
+            let result = self.getResponseText(text: self.speechText)
+            print(result)
+            self.speech(text: result + "Ready")
         })
     }
     
@@ -294,6 +298,16 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     func audioPlayerDidFinishPlaying(successfully: Bool) {
         print(successfully)
     }
+    
+    func getResponseText(text: String) -> String {
+        for command in commands {
+            if text.contains(command.rawValue) {
+                return command.response(command: command)
+            }
+        }
+        
+        return "すみません．よくわかりません．"
+    }
 }
 
 extension SelectBasicViewController: SFSpeechRecognizerDelegate {
@@ -308,6 +322,24 @@ extension SelectBasicViewController: SFSpeechRecognizerDelegate {
 enum State {
     case hotword
     case speechRecognition
+}
+
+enum Command: String{
+    case shoyu = "醤油"
+    case salt = "塩"
+    case suger = "砂糖"
+    
+    func response(command: Command) -> String{
+
+        switch command {
+        case .shoyu:
+            return "醤油"
+        case .salt:
+            return "塩"
+        case .suger:
+            return "砂糖"
+        }
+    }
 }
 
 
