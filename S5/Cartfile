@@ -1,4 +1,5 @@
 github "watson-developer-cloud/swift-sdk"
 github "Alamofire/Alamofire" ~> 4.7
 github "SwiftyJSON/SwiftyJSON" ~> 4.0
-github "bahlo/SwiftGif" ~> 1.6.1
+github "bahlo/SwiftGif"
+github "kirualex/SwiftyGif"

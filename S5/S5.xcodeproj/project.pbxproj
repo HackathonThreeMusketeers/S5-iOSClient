@@ -17,7 +17,8 @@
 		0D85D91720F1C2E100FD2134 /* SpeechToTextV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91320F1C2E100FD2134 /* SpeechToTextV1.framework */; };
 		0D85D91820F1C2E100FD2134 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91420F1C2E100FD2134 /* SwiftyJSON.framework */; };
 		0D85D91A20F1C2E700FD2134 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91920F1C2E700FD2134 /* Accelerate.framework */; };
-		0D85D91C20F1C3F600FD2134 /* SwiftGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91B20F1C3F600FD2134 /* SwiftGif.framework */; };
+		0D85D92020F1C84500FD2134 /* SwiftGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D91F20F1C84500FD2134 /* SwiftGif.framework */; };
+		0D85D92220F1CA3800FD2134 /* SwiftyGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */; };
 		8F3EB26D20F1BAE300F65799 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26C20F1BAE300F65799 /* logo.png */; };
 		8F3EB26F20F1BB6E00F65799 /* sagasu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26E20F1BB6E00F65799 /* sagasu.png */; };
 		8F3EB27120F1BCE400F65799 /* touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB27020F1BCE400F65799 /* touroku.png */; };
@@ -70,11 +71,8 @@
 		0D85D91320F1C2E100FD2134 /* SpeechToTextV1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpeechToTextV1.framework; path = Carthage/Build/iOS/SpeechToTextV1.framework; sourceTree = "<group>"; };
 		0D85D91420F1C2E100FD2134 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		0D85D91920F1C2E700FD2134 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		0D85D91B20F1C3F600FD2134 /* SwiftGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGif.framework; path = Carthage/Build/iOS/SwiftGif.framework; sourceTree = "<group>"; };
-		2F7FB87C564A52022E97CD74 /* Pods-S5UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5UITests/Pods-S5UITests.release.xcconfig"; sourceTree = "<group>"; };
-		735E496681D04B3C091DEFCF /* Pods-S5UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S5UITests/Pods-S5UITests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F90FAD83E5753809B55118A /* Pods-S5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5/Pods-S5.release.xcconfig"; sourceTree = "<group>"; };
-		8350982D6D5A1CD3F9B1D751 /* Pods-S5Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S5Tests/Pods-S5Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D85D91F20F1C84500FD2134 /* SwiftGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGif.framework; path = Carthage/Build/iOS/SwiftGif.framework; sourceTree = "<group>"; };
+		0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyGif.framework; path = Carthage/Build/iOS/SwiftyGif.framework; sourceTree = "<group>"; };
 		8F3EB26C20F1BAE300F65799 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8F3EB26E20F1BB6E00F65799 /* sagasu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagasu.png; sourceTree = "<group>"; };
 		8F3EB27020F1BCE400F65799 /* touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touroku.png; sourceTree = "<group>"; };
@@ -100,8 +98,6 @@
 		8FC8932120F0ED460062E74B /* SelectBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBasicViewController.swift; sourceTree = "<group>"; };
 		8FC8932520F0FFC80062E74B /* souce */ = {isa = PBXFileReference; lastKnownFileType = folder; path = souce; sourceTree = "<group>"; };
 		8FC8932720F104840062E74B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		94448FB42B586215D8348756 /* Pods-S5Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5Tests/Pods-S5Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C5380F5B1EA42554121B6485 /* Pods-S5.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S5/Pods-S5.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D85D91C20F1C3F600FD2134 /* SwiftGif.framework in Frameworks */,
+				0D85D92220F1CA3800FD2134 /* SwiftyGif.framework in Frameworks */,
+				0D85D92020F1C84500FD2134 /* SwiftGif.framework in Frameworks */,
 				0D85D91A20F1C2E700FD2134 /* Accelerate.framework in Frameworks */,
 				0D85D91520F1C2E100FD2134 /* Starscream.framework in Frameworks */,
 				0D85D91620F1C2E100FD2134 /* Alamofire.framework in Frameworks */,
@@ -136,19 +133,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AE010432AA5420F19977423 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C5380F5B1EA42554121B6485 /* Pods-S5.debug.xcconfig */,
-				7F90FAD83E5753809B55118A /* Pods-S5.release.xcconfig */,
-				8350982D6D5A1CD3F9B1D751 /* Pods-S5Tests.debug.xcconfig */,
-				94448FB42B586215D8348756 /* Pods-S5Tests.release.xcconfig */,
-				735E496681D04B3C091DEFCF /* Pods-S5UITests.debug.xcconfig */,
-				2F7FB87C564A52022E97CD74 /* Pods-S5UITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		0D5136EB20F143DF0096FFE2 /* Snowboy Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +154,6 @@
 				8FC8930520F0E3950062E74B /* S5Tests */,
 				8FC8931020F0E3960062E74B /* S5UITests */,
 				8FC892EF20F0E3940062E74B /* Products */,
-				0AE010432AA5420F19977423 /* Pods */,
 				BBA59BF07A70FCECFDE80C40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -233,7 +216,8 @@
 		BBA59BF07A70FCECFDE80C40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0D85D91B20F1C3F600FD2134 /* SwiftGif.framework */,
+				0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */,
+				0D85D91F20F1C84500FD2134 /* SwiftGif.framework */,
 				0D85D91920F1C2E700FD2134 /* Accelerate.framework */,
 				0D85D91220F1C2E100FD2134 /* Alamofire.framework */,
 				0D85D91320F1C2E100FD2134 /* SpeechToTextV1.framework */,
@@ -395,8 +379,9 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SpeechToTextV1.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftGif.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyGif.framework",
 			);
 			outputPaths = (
 			);
@@ -623,7 +608,6 @@
 		};
 		8FC8931720F0E3960062E74B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5380F5B1EA42554121B6485 /* Pods-S5.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -653,7 +637,6 @@
 		};
 		8FC8931820F0E3960062E74B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F90FAD83E5753809B55118A /* Pods-S5.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -682,7 +665,6 @@
 		};
 		8FC8931A20F0E3960062E74B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8350982D6D5A1CD3F9B1D751 /* Pods-S5Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -703,7 +685,6 @@
 		};
 		8FC8931B20F0E3960062E74B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94448FB42B586215D8348756 /* Pods-S5Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,7 +705,6 @@
 		};
 		8FC8931D20F0E3960062E74B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 735E496681D04B3C091DEFCF /* Pods-S5UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -744,7 +724,6 @@
 		};
 		8FC8931E20F0E3960062E74B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F7FB87C564A52022E97CD74 /* Pods-S5UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
