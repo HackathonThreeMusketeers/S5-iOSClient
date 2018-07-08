@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftGifOrigin
+import SwiftGif
 
 class ViewController: UIViewController {
 

@@ -1,6 +1,0 @@
-framework module Pods_S5 {
-  umbrella header "Pods-S5-umbrella.h"
-
-  export *
-  module * { export * }
-}

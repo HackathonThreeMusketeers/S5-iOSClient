@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AudioKit
 import Speech
 import AVFoundation
 import Alamofire
