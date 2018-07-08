@@ -13,6 +13,10 @@
 		0D5136F620F143F90096FFE2 /* common.res in Resources */ = {isa = PBXBuildFile; fileRef = 0D5136EF20F143F90096FFE2 /* common.res */; };
 		0D5136F720F143F90096FFE2 /* kingyo.pmdl in Resources */ = {isa = PBXBuildFile; fileRef = 0D5136F020F143F90096FFE2 /* kingyo.pmdl */; };
 		304C92FD052FABFA9B876389 /* Pods_S5Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1670BB1C8BB0C5FF22019B39 /* Pods_S5Tests.framework */; };
+		8F3EB26D20F1BAE300F65799 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26C20F1BAE300F65799 /* logo.png */; };
+		8F3EB26F20F1BB6E00F65799 /* sagasu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26E20F1BB6E00F65799 /* sagasu.png */; };
+		8F3EB27120F1BCE400F65799 /* touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB27020F1BCE400F65799 /* touroku.png */; };
+		8F3EB27320F1C00C00F65799 /* sasisuseso.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB27220F1C00C00F65799 /* sasisuseso.gif */; };
 		8F62153720F145F700CC211A /* voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F62153220F145F500CC211A /* voice.png */; };
 		8F62153820F145F700CC211A /* btn_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F62153320F145F600CC211A /* btn_1.png */; };
 		8F62153920F145F700CC211A /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F62153420F145F600CC211A /* title.png */; };
@@ -65,6 +69,10 @@
 		735E496681D04B3C091DEFCF /* Pods-S5UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S5UITests/Pods-S5UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F90FAD83E5753809B55118A /* Pods-S5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5.release.xcconfig"; path = "Pods/Target Support Files/Pods-S5/Pods-S5.release.xcconfig"; sourceTree = "<group>"; };
 		8350982D6D5A1CD3F9B1D751 /* Pods-S5Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-S5Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-S5Tests/Pods-S5Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		8F3EB26C20F1BAE300F65799 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		8F3EB26E20F1BB6E00F65799 /* sagasu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagasu.png; sourceTree = "<group>"; };
+		8F3EB27020F1BCE400F65799 /* touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touroku.png; sourceTree = "<group>"; };
+		8F3EB27220F1C00C00F65799 /* sasisuseso.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sasisuseso.gif; sourceTree = "<group>"; };
 		8F62153220F145F500CC211A /* voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voice.png; sourceTree = "<group>"; };
 		8F62153320F145F600CC211A /* btn_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_1.png; sourceTree = "<group>"; };
 		8F62153420F145F600CC211A /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
@@ -179,6 +187,10 @@
 				0D5136E920F143760096FFE2 /* AITalkWebAPI.swift */,
 				8FC8932720F104840062E74B /* CustomTableViewCell.swift */,
 				8FC892F520F0E3940062E74B /* Main.storyboard */,
+				8F3EB27220F1C00C00F65799 /* sasisuseso.gif */,
+				8F3EB27020F1BCE400F65799 /* touroku.png */,
+				8F3EB26E20F1BB6E00F65799 /* sagasu.png */,
+				8F3EB26C20F1BAE300F65799 /* logo.png */,
 				8F62153620F145F700CC211A /* back.png */,
 				8F62153520F145F600CC211A /* background.png */,
 				8F62153320F145F600CC211A /* btn_1.png */,
@@ -335,10 +347,14 @@
 				8F62153920F145F700CC211A /* title.png in Resources */,
 				8F62153820F145F700CC211A /* btn_1.png in Resources */,
 				8F62153720F145F700CC211A /* voice.png in Resources */,
+				8F3EB27320F1C00C00F65799 /* sasisuseso.gif in Resources */,
 				8FC892F920F0E3950062E74B /* Assets.xcassets in Resources */,
+				8F3EB26D20F1BAE300F65799 /* logo.png in Resources */,
+				8F3EB27120F1BCE400F65799 /* touroku.png in Resources */,
 				8FC892F720F0E3940062E74B /* Main.storyboard in Resources */,
 				0D5136F620F143F90096FFE2 /* common.res in Resources */,
 				0D5136F720F143F90096FFE2 /* kingyo.pmdl in Resources */,
+				8F3EB26F20F1BB6E00F65799 /* sagasu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +383,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-S5/Pods-S5-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

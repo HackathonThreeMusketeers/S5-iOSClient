@@ -10,6 +10,7 @@ target 'S5' do
   pod 'Alamofire', '~>4.5'
   pod "SwiftyJSON", ">= 2.2"
   pod 'AudioKit'
+  pod 'SwiftGifOrigin', '~> 1.6'
 
   target 'S5Tests' do
     inherit! :search_paths
