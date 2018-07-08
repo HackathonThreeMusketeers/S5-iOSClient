@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftGifOrigin
+import SwiftyGif
 
 class ViewController: UIViewController {
 
@@ -15,8 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let image = UIImage.gif(name: "sasisuseso")
-        imageView.image = image
+        let image = UIImage(gifName: "sasisuseso")
+        imageView.setGifImage(image)
+        imageView.startAnimatingGif()
+
         
     }
 
