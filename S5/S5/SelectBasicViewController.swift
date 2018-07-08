@@ -25,7 +25,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     
     /*smart speaker用変数*/
     let RESOURCE = Bundle.main.path(forResource: "common", ofType: "res")
-    let MODEL = Bundle.main.path(forResource: "kingyo", ofType: "pmdl")
+    let MODEL = Bundle.main.path(forResource: "doko", ofType: "pmdl")
     
     var wrapper: SnowboyWrapper! = nil
     var hotwordTimer: Timer!
@@ -185,20 +185,19 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
             self.accumulator.add(results: results)
             print(self.accumulator.bestTranscript)
             
-            self.speechText = self.getResponseText(text: self.accumulator.bestTranscript)
-            self.speech(text: self.speechText + "Ready")
+            self.speech(text: self.getResponseText(text: self.accumulator.bestTranscript))
             
             //ここにhttp書く
             var id = 0
-            if(self.speechText=="佐藤"){
+            if(self.accumulator.bestTranscript.contains("佐藤")){
                 id = 1
-            }else if(self.speechText=="塩"){
+            }else if(self.accumulator.bestTranscript.contains("塩")){
                 id = 2
-            }else if(self.speechText=="酢"){
-                id = 3
-            }else if(self.speechText=="醤油"){
+            }else if(self.accumulator.bestTranscript.contains("酢")){
                 id = 4
-            }else if(self.speechText=="みそ"){
+            }else if(self.accumulator.bestTranscript.contains("醤油")){
+                id = 3
+            }else if(self.accumulator.bestTranscript.contains("みそ")){
                 id = 5
             }
             if(id != 0){
@@ -267,7 +266,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         
         if result == 1 {
             stopHotwordDetect()
-            speech(text: "なんでしょう？")
+            speech(text: "何でしょう？")
         }
     }
     
@@ -338,11 +337,11 @@ enum Command: String{
 
         switch command {
         case .shoyu:
-            return "醤油"
+            return "醤油" + "ですね？"
         case .salt:
-            return "塩"
+            return "塩" + "ですね？"
         case .suger:
-            return "佐藤"
+            return "佐藤" + "ですね？"
         }
     }
 }
