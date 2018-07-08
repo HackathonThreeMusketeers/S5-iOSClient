@@ -172,7 +172,7 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func startSpeechRecognizer(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
             self.stopSpeechRecognizer()
         })
         
@@ -332,7 +332,7 @@ enum State {
 enum Command: String{
     case shoyu = "醤油"
     case salt = "塩"
-    case suger = "砂糖"
+    case suger = "佐藤"
     
     func response(command: Command) -> String{
 
@@ -342,7 +342,7 @@ enum Command: String{
         case .salt:
             return "塩"
         case .suger:
-            return "砂糖"
+            return "佐藤"
         }
     }
 }
