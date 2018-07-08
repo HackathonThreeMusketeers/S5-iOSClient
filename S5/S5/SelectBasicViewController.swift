@@ -172,7 +172,10 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func startSpeechRecognizer(){
-
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+            self.stopSpeechRecognizer()
+        })
+        
         let failure = { (error: Error) in print(error) }
         var settings = RecognitionSettings(contentType: "audio/ogg;codecs=opus")
         settings.interimResults = false
@@ -181,7 +184,8 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
             results in
             self.accumulator.add(results: results)
             print(self.accumulator.bestTranscript)
-            self.speechText = self.accumulator.bestTranscript
+            
+            self.speechText = self.getResponseText(text: self.accumulator.bestTranscript)
             self.speech(text: self.speechText + "Ready")
             
             //ここにhttp書く
