@@ -14,10 +14,10 @@ import AVFoundation
 class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
     
     /// 画像のファイル名
-    let imageNames = ["souce/souce1.png", "souce/souce2.png", "souce/souce3.png", "souce/souce4.png", "souce/souce4.png"]
+    let imageNames = ["souce/souce1.png", "souce/souce2.png", "souce/souce3.png", "souce/souce4.png", "souce/souce5.png"]
     
     /// 画像のタイトル
-    let imageTitles = ["砂糖", "ソース2", "ソース3", "ソース4", "ソース5"]
+    let imageTitles = ["砂糖", "塩", "酢", "醤油", "みそ"]
     
     @IBOutlet weak var tableView: UITableView!
     
