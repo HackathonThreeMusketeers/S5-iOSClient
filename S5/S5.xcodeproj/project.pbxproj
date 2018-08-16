@@ -21,6 +21,18 @@
 		0D85D92220F1CA3800FD2134 /* SwiftyGif.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */; };
 		0D85D92420F1CBDC00FD2134 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85D92320F1CBDC00FD2134 /* Credentials.swift */; };
 		0D85D92720F1D7F000FD2134 /* doko.pmdl in Resources */ = {isa = PBXBuildFile; fileRef = 0D85D92620F1D7F000FD2134 /* doko.pmdl */; };
+		0D85D92920F1E35000FD2134 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D92820F1E35000FD2134 /* opencv2.framework */; };
+		0D85D93520F1E4A600FD2134 /* opencvWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0D85D93420F1E4A500FD2134 /* opencvWrapper.mm */; };
+		0D85D93920F1E4CB00FD2134 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D93620F1E4CB00FD2134 /* CoreFoundation.framework */; };
+		0D85D93A20F1E4CB00FD2134 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D93720F1E4CB00FD2134 /* Foundation.framework */; };
+		0D85D93B20F1E4CB00FD2134 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D93820F1E4CB00FD2134 /* AVFoundation.framework */; };
+		0D85D93D20F1E4D300FD2134 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D93C20F1E4D300FD2134 /* UIKit.framework */; };
+		0D85D93F20F1E4D900FD2134 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D93E20F1E4D900FD2134 /* AssetsLibrary.framework */; };
+		0D85D94420F1E4F400FD2134 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D94020F1E4F400FD2134 /* CoreGraphics.framework */; };
+		0D85D94520F1E4F400FD2134 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D94120F1E4F400FD2134 /* CoreAudio.framework */; };
+		0D85D94620F1E4F400FD2134 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D94220F1E4F400FD2134 /* CoreMedia.framework */; };
+		0D85D94720F1E4F400FD2134 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D94320F1E4F400FD2134 /* CoreVideo.framework */; };
+		0D85D94920F1E4FD00FD2134 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D85D94820F1E4FD00FD2134 /* QuartzCore.framework */; };
 		8F3EB26D20F1BAE300F65799 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26C20F1BAE300F65799 /* logo.png */; };
 		8F3EB26F20F1BB6E00F65799 /* sagasu.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB26E20F1BB6E00F65799 /* sagasu.png */; };
 		8F3EB27120F1BCE400F65799 /* touroku.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F3EB27020F1BCE400F65799 /* touroku.png */; };
@@ -77,6 +89,19 @@
 		0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyGif.framework; path = Carthage/Build/iOS/SwiftyGif.framework; sourceTree = "<group>"; };
 		0D85D92320F1CBDC00FD2134 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = "../../../swift/speech-to-text-swift/Speech to Text/Credentials.swift"; sourceTree = "<group>"; };
 		0D85D92620F1D7F000FD2134 /* doko.pmdl */ = {isa = PBXFileReference; lastKnownFileType = file; path = doko.pmdl; sourceTree = "<group>"; };
+		0D85D92820F1E35000FD2134 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		0D85D93320F1E4A500FD2134 /* opencvWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opencvWrapper.h; sourceTree = "<group>"; };
+		0D85D93420F1E4A500FD2134 /* opencvWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = opencvWrapper.mm; sourceTree = "<group>"; };
+		0D85D93620F1E4CB00FD2134 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		0D85D93720F1E4CB00FD2134 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D85D93820F1E4CB00FD2134 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0D85D93C20F1E4D300FD2134 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0D85D93E20F1E4D900FD2134 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0D85D94020F1E4F400FD2134 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0D85D94120F1E4F400FD2134 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		0D85D94220F1E4F400FD2134 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0D85D94320F1E4F400FD2134 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0D85D94820F1E4FD00FD2134 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8F3EB26C20F1BAE300F65799 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8F3EB26E20F1BB6E00F65799 /* sagasu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sagasu.png; sourceTree = "<group>"; };
 		8F3EB27020F1BCE400F65799 /* touroku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touroku.png; sourceTree = "<group>"; };
@@ -109,9 +134,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D85D94920F1E4FD00FD2134 /* QuartzCore.framework in Frameworks */,
+				0D85D94420F1E4F400FD2134 /* CoreGraphics.framework in Frameworks */,
+				0D85D94520F1E4F400FD2134 /* CoreAudio.framework in Frameworks */,
+				0D85D94620F1E4F400FD2134 /* CoreMedia.framework in Frameworks */,
+				0D85D94720F1E4F400FD2134 /* CoreVideo.framework in Frameworks */,
+				0D85D93F20F1E4D900FD2134 /* AssetsLibrary.framework in Frameworks */,
+				0D85D93D20F1E4D300FD2134 /* UIKit.framework in Frameworks */,
+				0D85D93920F1E4CB00FD2134 /* CoreFoundation.framework in Frameworks */,
+				0D85D93A20F1E4CB00FD2134 /* Foundation.framework in Frameworks */,
+				0D85D93B20F1E4CB00FD2134 /* AVFoundation.framework in Frameworks */,
+				0D85D91A20F1C2E700FD2134 /* Accelerate.framework in Frameworks */,
 				0D85D92220F1CA3800FD2134 /* SwiftyGif.framework in Frameworks */,
 				0D85D92020F1C84500FD2134 /* SwiftGif.framework in Frameworks */,
-				0D85D91A20F1C2E700FD2134 /* Accelerate.framework in Frameworks */,
+				0D85D92920F1E35000FD2134 /* opencv2.framework in Frameworks */,
 				0D85D91520F1C2E100FD2134 /* Starscream.framework in Frameworks */,
 				0D85D91620F1C2E100FD2134 /* Alamofire.framework in Frameworks */,
 				0D85D91720F1C2E100FD2134 /* SpeechToTextV1.framework in Frameworks */,
@@ -148,6 +184,8 @@
 				0D5136F120F143F90096FFE2 /* SnowboyWrapper.h */,
 				0D5136EE20F143F90096FFE2 /* SnowboyWrapper.mm */,
 				0D5136EC20F143F70096FFE2 /* S5-Bridging-Header.h */,
+				0D85D93320F1E4A500FD2134 /* opencvWrapper.h */,
+				0D85D93420F1E4A500FD2134 /* opencvWrapper.mm */,
 			);
 			path = "Snowboy Files";
 			sourceTree = "<group>";
@@ -176,6 +214,7 @@
 		8FC892F020F0E3940062E74B /* S5 */ = {
 			isa = PBXGroup;
 			children = (
+				0D85D92820F1E35000FD2134 /* opencv2.framework */,
 				0D5136EB20F143DF0096FFE2 /* Snowboy Files */,
 				8FC8932520F0FFC80062E74B /* souce */,
 				8FC892F120F0E3940062E74B /* AppDelegate.swift */,
@@ -222,6 +261,16 @@
 		BBA59BF07A70FCECFDE80C40 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D85D94820F1E4FD00FD2134 /* QuartzCore.framework */,
+				0D85D94120F1E4F400FD2134 /* CoreAudio.framework */,
+				0D85D94020F1E4F400FD2134 /* CoreGraphics.framework */,
+				0D85D94220F1E4F400FD2134 /* CoreMedia.framework */,
+				0D85D94320F1E4F400FD2134 /* CoreVideo.framework */,
+				0D85D93E20F1E4D900FD2134 /* AssetsLibrary.framework */,
+				0D85D93C20F1E4D300FD2134 /* UIKit.framework */,
+				0D85D93820F1E4CB00FD2134 /* AVFoundation.framework */,
+				0D85D93620F1E4CB00FD2134 /* CoreFoundation.framework */,
+				0D85D93720F1E4CB00FD2134 /* Foundation.framework */,
 				0D85D92120F1CA3800FD2134 /* SwiftyGif.framework */,
 				0D85D91F20F1C84500FD2134 /* SwiftGif.framework */,
 				0D85D91920F1C2E700FD2134 /* Accelerate.framework */,
@@ -444,6 +493,7 @@
 				8FC8932820F104840062E74B /* CustomTableViewCell.swift in Sources */,
 				0D85D92420F1CBDC00FD2134 /* Credentials.swift in Sources */,
 				0D5136F520F143F90096FFE2 /* SnowboyWrapper.mm in Sources */,
+				0D85D93520F1E4A600FD2134 /* opencvWrapper.mm in Sources */,
 				8FC892F220F0E3940062E74B /* AppDelegate.swift in Sources */,
 				0D5136EA20F143760096FFE2 /* AITalkWebAPI.swift in Sources */,
 			);
@@ -624,8 +674,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/S5",
 				);
 				INFOPLIST_FILE = S5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,8 +705,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/S5",
 				);
 				INFOPLIST_FILE = S5/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -77,7 +77,7 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t8n-cn-T4M">
+                                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t8n-cn-T4M">
                                             <rect key="frame" x="98.5" y="0.0" width="178" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <inset key="contentEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -88,6 +88,9 @@
                                                 <rect key="frame" x="325" y="0.0" width="34" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="voice.png"/>
+                                                <connections>
+                                                    <action selector="pushGestureOnButton:" destination="DnP-Iq-cdJ" eventType="touchUpInside" id="qQX-lt-KQY"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -145,12 +148,18 @@
                                     <outlet property="delegate" destination="DnP-Iq-cdJ" id="Nhf-6C-EUn"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cUD-H4-NUn">
+                                <rect key="frame" x="259" y="67" width="116" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gIc-DN-ez1"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="6fu-zi-Va9" id="x8V-zz-gfr"/>
+                        <outlet property="vwCameraPreview" destination="cUD-H4-NUn" id="pJe-wK-7bf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cmu-uw-xiD" userLabel="First Responder" sceneMemberID="firstResponder"/>

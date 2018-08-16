@@ -13,7 +13,12 @@ import Alamofire
 import SwiftyJSON
 import SpeechToTextV1
 
-class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AVAudioRecorderDelegate, AVAudioPlayerDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    @IBOutlet weak var vwCameraPreview: UIView!
+    var beforeImage: UIImage!
+    var gestureOn = false
+    var x = 0.0
     
     /// 画像のファイル名
     let imageNames = ["souce/souce1.png", "souce/souce2.png", "souce/souce3.png", "souce/souce4.png", "souce/souce5.png"]
@@ -54,6 +59,41 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         //Todo 音声ボタンを押したらstartHotwordDetect()を実行？？　
         startHotwordDetect()
         // Do any additional setup after loading the view.
+        
+    
+        // Gesture
+        
+        let captureSession = AVCaptureSession()
+        var videoDevice : AVCaptureDevice!
+        if #available(iOS 10.0, *) {
+            videoDevice = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera,
+                                                  for: .video, position: .front)
+        }
+        
+        let videoInput = try! AVCaptureDeviceInput.init(device: videoDevice!)
+        captureSession.addInput(videoInput)
+        
+        let videoDataOutput = AVCaptureVideoDataOutput()
+        videoDataOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
+        captureSession.addOutput(videoDataOutput)
+        
+        if let videoLayer : AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer.init(session: captureSession) {
+            videoLayer.frame = vwCameraPreview.bounds
+            videoLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+            vwCameraPreview.layer.addSublayer(videoLayer)
+            vwCameraPreview.isHidden = true
+        }
+        
+        captureSession.beginConfiguration()
+        if captureSession.canSetSessionPreset(AVCaptureSession.Preset.low) {
+            captureSession.sessionPreset = AVCaptureSession.Preset.low
+        }
+        captureSession.commitConfiguration()
+        
+        
+        print("get started")
+        captureSession.startRunning()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -312,6 +352,61 @@ class SelectBasicViewController: UIViewController, UITableViewDelegate, UITableV
         
         return "すみません．よくわかりません．"
     }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        connection.videoOrientation = .portrait
+        
+        // UIImageへの変換
+        let image = imageFromSampleBuffer(sampleBuffer: sampleBuffer)
+        if self.beforeImage != nil {
+            
+            
+            let newX = opencvWrapper.flow(image, image2: beforeImage)
+            
+            if (newX - self.x < -60.0) && (newX != 100.0) && self.gestureOn {
+                print("to left")
+                let url:String = "http://ec2-18-222-171-227.us-east-2.compute.amazonaws.com:3000/allvibration"
+                Alamofire.request(url, method: .get, encoding: JSONEncoding.default).responseJSON{ response in
+                    switch response.result {
+                    case .success:
+                        let json = JSON(response.result.value ?? kill)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+                self.gestureOn = false
+            }
+            
+            self.x = newX
+            
+            
+            self.beforeImage = image.copy() as! UIImage
+        } else {
+            self.beforeImage = image.copy() as! UIImage
+        }
+    }
+    
+    func imageFromSampleBuffer(sampleBuffer :CMSampleBuffer) -> UIImage {
+        let imageBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+        let ciimage : CIImage = CIImage(cvPixelBuffer: imageBuffer)
+        let image : UIImage = self.convert(cmage: ciimage)
+        
+        return image
+    }
+    
+    func convert(cmage:CIImage) -> UIImage
+    {
+        let context:CIContext = CIContext.init(options: nil)
+        let cgImage:CGImage = context.createCGImage(cmage, from: cmage.extent)!
+        let image:UIImage = UIImage.init(cgImage: cgImage)
+        return image
+    }
+    
+    @IBAction func pushGestureOnButton(_ sender: Any) {
+        print("gesture toggled")
+        self.gestureOn = !self.gestureOn
+    }
+    
 }
 
 extension SelectBasicViewController: SFSpeechRecognizerDelegate {

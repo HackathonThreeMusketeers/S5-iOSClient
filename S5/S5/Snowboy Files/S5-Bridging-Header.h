@@ -6,5 +6,6 @@
 #define S5_Bridging_Header_h
 
 #import "SnowboyWrapper.h"
+#import "opencvWrapper.h"
 
 #endif /*S5_Bridging_Header_h*/
